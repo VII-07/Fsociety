@@ -1,6 +1,10 @@
+import LoginPage from "./LoginPage/LoginPage";
+
 const AppContainer = () => {
     return ( 
-        <div></div>
+        <>
+            <LoginPage/>
+        </>
      );
 }
  
