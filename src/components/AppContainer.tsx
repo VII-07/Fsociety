@@ -1,11 +1,17 @@
-import LoginPage from "./LoginPage/LoginPage";
+import { BrowserRouter as Router} from "react-router-dom";
+import AuthLayout from "./_auth/AuthLayout/AuthLayout";
+import { Routes, Route } from "react-router-dom";
 
 const AppContainer = () => {
-    return ( 
-        <>
-            <LoginPage/>
-        </>
-     );
+    return (
+        <Router>
+            <main>
+                <Routes>
+                    <Route path="/" index element={<AuthLayout />} />
+                </Routes>
+            </main>
+        </Router>
+    );
 }
- 
+
 export default AppContainer;
