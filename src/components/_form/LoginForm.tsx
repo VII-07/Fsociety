@@ -1,5 +1,7 @@
 import { useState } from "react";
 import style from './styles/LofinForm.module.scss'
+import { Link } from "react-router-dom";
+import FastSingIn from "../_auth/FastSingIn/FastSingIn";
 
 const LoginForm = () => {
 
@@ -20,17 +22,29 @@ const LoginForm = () => {
 
     return (
         <>
-            <h2 className={style.login__title}>Welcome back!</h2>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email">
-                    <input type="email" placeholder="Your email" id="email" name="email" required onChange={handleInputChange} />
-                </label>
-                <label htmlFor="password">
-                    <input type="password" placeholder="Your password" id="password" name="password" required onChange={handleInputChange} />
-                </label>
-                <input type="submit" value="Login" />
-                <a className={style.forgot__password} href="forgot-password">Forgot password?</a>
-            </form>
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h2 className={style.login__title}>Welcome back!</h2>
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="email">
+                                <input type="email" placeholder="Your email" id="email" name="email" required onChange={handleInputChange} />
+                            </label>
+                            <label htmlFor="password">
+                                <input type="password" placeholder="Your password" id="password" name="password" required onChange={handleInputChange} />
+                            </label>
+                            <input type="submit" value="Login" />
+                            <a className={style.forgot__password} href="forgot-password">Forgot password?</a>
+                        </form>
+
+                        <FastSingIn />
+                    </div>
+                </div>
+
+                <div className={style.recomendation}>
+                    <p>Don’t have an account ? <Link to="/sing-up"><strong>Sign Up</strong></Link></p>
+                </div>
+            </div>
         </>
     );
 }

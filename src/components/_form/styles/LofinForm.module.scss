@@ -19,3 +19,20 @@
     }
 }
 
+.recomendation {
+    position: fixed;
+    bottom: 20px;
+    left: 42%;
+    color: white;
+
+    a{
+        text-decoration: none;
+    }
+
+    strong {
+        color: wheat;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+

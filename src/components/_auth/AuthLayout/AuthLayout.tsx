@@ -1,8 +1,8 @@
 import logo from '../../../assets/FSLogo2.png';
 import { Row, Col } from 'react-bootstrap';
 import styles from './styles.module.scss';
-import LoginForm from '../../_form/LoginForm';
 import FastSingIn from '../FastSingIn/FastSingIn';
+import { Outlet } from 'react-router-dom';
 
 const AuthLayout = () => {
     return (
@@ -22,9 +22,7 @@ const AuthLayout = () => {
                             <img src={logo} alt="logo" />
                         </div>
 
-                        <LoginForm/>
-
-                        <FastSingIn/>
+                        <Outlet/>
 
                     </section>
 
