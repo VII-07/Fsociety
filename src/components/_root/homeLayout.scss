@@ -1,0 +1,15 @@
+@import '../styles/color.scss';
+
+.home__layout{
+    background-color: $dark;
+}
+.nav-link.active{
+    background: $buttonGreen;
+    box-shadow: 10px 0px 15px rgba(137, 255, 69, 0.4);
+    color: black;
+    display: flex; 
+    align-items: center;
+    &:hover{
+        color: black;
+    }
+}
