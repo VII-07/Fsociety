@@ -1,12 +1,7 @@
-import TopHomeContainer from "./TopHomeContainer/TopHomeContainer";
-
-
 const Home = () => {
-    return (
-        <section id="home">
-            <TopHomeContainer/>
-        </section>
-    );
+    return ( 
+        <h1>Home</h1>
+     );
 }
-
+ 
 export default Home;
